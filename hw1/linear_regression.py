@@ -93,7 +93,7 @@ W = np.random.normal(0, 0.01, (1, num_X))
 b = np.random.normal(0, 0.01, 1)
 
 #regularization
-lam = 10000
+lam = 100
 
 #learning rate
 eta = 0.5
