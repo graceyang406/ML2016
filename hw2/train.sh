@@ -1,1 +1,1 @@
-python logistic_regression_train.py $1 $2
+python naive_bayes_train.py $1 $2

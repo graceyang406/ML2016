@@ -1,1 +1,1 @@
-python logistic_regression_test.py $1 $2 $3
+python naive_bayes_test.py $1 $2 $3
