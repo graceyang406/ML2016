@@ -1,0 +1,5 @@
+For training, please type:
+sh train.sh data/ model1 model2
+
+For testing, please type:
+sh test.sh data/ model1 model2 prediction.csv
