@@ -119,7 +119,7 @@ def train():
     datagen.fit(train_x)
     model.fit_generator(datagen.flow(train_x, train_y, batch_size=100), samples_per_epoch=len(train_x)*5, nb_epoch=50, 
                         validation_data=(val_x, val_y), callbacks=[modelcheckpoint, earlystopping])
-    while len(unlabel_x) > 0:
+    for it in range(5):
         model.load_weights(model_file)
         unlabel_proba = model.predict_proba(unlabel_x, batch_size=100)
         new_label_dict = {}
@@ -159,7 +159,7 @@ def train():
         train_y = train_y[p]
         print "Training", len(train_x), "data..."
         model.fit_generator(datagen.flow(train_x, train_y, batch_size=100), samples_per_epoch=len(train_x)*5, nb_epoch=25, 
-                            validation_data=(val_x, val_y), callbacks=[modelcheckpoint, earlystopping])
+                            validation_data=(val_x, val_y), callbacks=[modelcheckpoint])
 
 
 # In[26]:
